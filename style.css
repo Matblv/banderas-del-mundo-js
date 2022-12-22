@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    top: 50px;
+    border: solid 2px black;
+    margin:auto;
+    width: 350px;
+    height: 550px;
+}
+
+.title2 {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.flagImage {
+    margin: 20px 0;
+    height: 165px;
+    border: solid 1px black;
+    box-shadow: 0 4px 5px gray;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.paisContainer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 24px;
+    border: solid 1px black;
+    margin: 10px 20px;
+}
+
+.paisAdivinar {
+    font-size: 26px;
+    letter-spacing: 8px;
+}
+
+.tecladoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letra, .letraEspecial, .letraEspecial2, .letraEspecial3, #reset {
+    border: 1px solid black;
+    padding: 2px 5px;
+    margin: 4.8px;
+    font-size: 18px;
+}
+
+#reset {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.letraSeleccionada {
+    text-decoration: underline;
+    overflow: hidden;
+}
