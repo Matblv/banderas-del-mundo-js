@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const reset = document.getElementById("reset")
+const mostrar = document.getElementById("mostrar")
 
 const fetchData = async () => {
     try {
@@ -32,6 +33,10 @@ const adivinar = data => {
     });
     let paisSelec = nombrePaises[parseInt(rand)]
     console.log(paisSelec);
+
+    mostrar.addEventListener("click", () => {
+        letraSeleccionada.innerText = paisSelec
+    })
 
     imageContainer.innerHTML += `<img class="flagImage" src="${data[parseInt(rand)].flag}">`
     
