@@ -25,8 +25,8 @@ main {
     padding: 5px 8px;
     background-color: rgba(0, 0, 0, 0.4);
     border: solid 1px white;
-    position: relative;
-    top: 15px;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .card {
@@ -35,7 +35,7 @@ main {
     border: solid 2px black;
     margin:auto;
     width: 375px;
-    height: 550px;
+    height: 575px;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 20px rgb(65, 65, 65);
 }
@@ -90,7 +90,8 @@ main {
     margin: 4.2px;
     font-size: 18px;
     border: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid white 1px;
     color: white;
     cursor: pointer;
 }

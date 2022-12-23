@@ -9,7 +9,7 @@ const moreInfo = document.querySelector(".moreInfo");
 const i2 = document.getElementById("i2");
 const point = document.querySelector(".point");
 let contador = sessionStorage.getItem("contador");
-point.innerHTML = `puntos: ${contador}`
+point.innerHTML = `PUNTOS: ${contador}`
 if (typeof contador === "object") point.innerHTML = `puntos: 0`
 
 const fetchData = async () => {
@@ -31,7 +31,6 @@ const imageContainer = document.querySelector(".imageContainer");
 let rand = Math.random() * 250;
 console.log(parseInt(rand));
 const nombrePaises = [];
-const puntos = [];
 
 const adivinar = data => {
     let poblacion = data[parseInt(rand)].population;
@@ -40,7 +39,7 @@ const adivinar = data => {
     input.value = ""
     // pasar todos los nombre a un arr en mayus
     data.forEach(e => {
-        let nombreMayus = e.name.toUpperCase();
+        let nombreMayus = e.translations.es.toUpperCase();
         nombrePaises.push(nombreMayus);
     });
     let paisSelec = nombrePaises[parseInt(rand)]
@@ -70,11 +69,13 @@ const adivinar = data => {
                 <p>Lenguaje: ${data[parseInt(rand)].languages[0].name}.</p>
                 <p>Continente: ${data[parseInt(rand)].subregion}.</p>
                 <p>Población: ${poblacionPoint}</p>
+                <p>Mas info: <a target="_blank" href="https://es.wikipedia.org/wiki/${paisSelec.toLowerCase()}">CLICK AQUÍ</a></p>
                 `
-                contador++
-                point.innerHTML = `puntos: ${contador}`
-                sessionStorage.setItem("contador", contador)
+                contador++;
+                point.innerHTML = `PUNTOS: ${contador}`;
+                sessionStorage.setItem("contador", contador);
                 reset.focus();
+                input.readOnly = true;
             }, 500);
         };
     });
