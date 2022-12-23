@@ -67,6 +67,8 @@ const adivinar = data => {
                 <p>Continente: ${data[parseInt(rand)].subregion}.</p>
                 <p>Población: ${poblacionPoint}</p>
                 `
+                moreInfo.click()
+                moreInfo.focus()
             }, 500);
         };
     });

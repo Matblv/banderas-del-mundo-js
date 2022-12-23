@@ -1,3 +1,6 @@
+/* font-family: 'PT Sans', sans-serif; 400 700  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +11,7 @@ body {
     background: url("./imagenes/353018(2).jpg");
     background-size: cover;
     background-position: center;
+    font-family: 'PT Sans', sans-serif;
 }
 
 main {
@@ -22,11 +26,11 @@ main {
     width: 375px;
     height: 550px;
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 20px white;
+    box-shadow: 0 10px 20px rgb(65, 65, 65);
 }
 
 .title2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-top: 20px;
     color: white;
 }
@@ -40,6 +44,7 @@ main {
 
 .title {
     font-size: 30px;
+    text-shadow: 0 0 10px white;
 }
 
 .paisContainer {
