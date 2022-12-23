@@ -6,6 +6,7 @@ const reset = document.getElementById("reset");
 const mostrar = document.getElementById("mostrar");
 const input = document.querySelector(".input");
 const moreInfo = document.querySelector(".moreInfo");
+const i2 = document.getElementById("i2")
 
 
 const fetchData = async () => {
@@ -67,8 +68,7 @@ const adivinar = data => {
                 <p>Continente: ${data[parseInt(rand)].subregion}.</p>
                 <p>Población: ${poblacionPoint}</p>
                 `
-                moreInfo.click()
-                moreInfo.focus()
+                reset.focus()
             }, 500);
         };
     });
