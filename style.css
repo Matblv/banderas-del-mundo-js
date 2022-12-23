@@ -60,13 +60,16 @@ main {
 
 .paisContainer {
     height: 80px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     font-size: 24px;
     border: solid 1px black;
-    margin: 10px 20px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .paisAdivinar {
@@ -110,6 +113,7 @@ main {
     color: white;
     font-size: 28px;
     text-align: center;
+    width: 300px;
 }
 
 .moreInfo {

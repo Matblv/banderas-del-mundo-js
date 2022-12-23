@@ -48,6 +48,7 @@ const adivinar = data => {
     mostrar.addEventListener("click", () => {
         input.style.color = "white";
         input.value = paisSelec;
+        input.readOnly = true;
     })
 
     imageContainer.innerHTML += `<img alt="flag" class="flagImage" src="${data[parseInt(rand)].flag}">`
@@ -69,7 +70,7 @@ const adivinar = data => {
                 <p>Lenguaje: ${data[parseInt(rand)].languages[0].name}.</p>
                 <p>Continente: ${data[parseInt(rand)].subregion}.</p>
                 <p>Población: ${poblacionPoint}</p>
-                <p>Mas info: <a target="_blank" href="https://es.wikipedia.org/wiki/${paisSelec.toLowerCase()}">CLICK AQUÍ</a></p>
+                <p style="color: greenyellow;">Mas info: <a style="color: lightblue;" target="_blank" href="https://es.wikipedia.org/wiki/${paisSelec.toLowerCase()}">CLICK AQUÍ</a></p>
                 `
                 contador++;
                 point.innerHTML = `PUNTOS: ${contador}`;
