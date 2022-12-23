@@ -18,6 +18,17 @@ main {
     text-align: center;
 }
 
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 1px white;
+    position: relative;
+    top: 15px;
+}
+
 .card {
     position: relative;
     top: 50px;
@@ -107,6 +118,31 @@ main {
     font-size: 22px;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 10px 20px;
+}
+
+
+/* ESTILOS BIBLIOTECA */
+
+.biblioteca {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardBiblio {
+    border: solid 1px black;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 375px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nombrePais {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2.8px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (min-width: 1200px) {

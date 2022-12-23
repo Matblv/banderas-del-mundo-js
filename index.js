@@ -48,7 +48,7 @@ const adivinar = data => {
         input.value = paisSelec;
     })
 
-    imageContainer.innerHTML += `<img class="flagImage" src="${data[parseInt(rand)].flag}">`
+    imageContainer.innerHTML += `<img alt="flag" class="flagImage" src="${data[parseInt(rand)].flag}">`
     
     // pasar texto a mayuscula
     input.addEventListener("input", () => {
