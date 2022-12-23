@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background: url("./imagenes/353018(2).jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 main {
     text-align: center;
 }
@@ -15,11 +21,14 @@ main {
     margin:auto;
     width: 375px;
     height: 550px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px white;
 }
 
 .title2 {
     font-size: 26px;
     margin-top: 20px;
+    color: white;
 }
 
 .flagImage {
@@ -55,20 +64,52 @@ main {
     justify-content: center;
 }
 
-.letra, .letraEspecial, .letraEspecial2, .letraEspecial3, #reset, #mostrar {
+/* .letra, .letraEspecial, .letraEspecial2, .letraEspecial3, #reset, #mostrar {
     border: 1px solid black;
+    
+} */
+
+#reset, #mostrar {
     padding: 3px 7px;
     margin: 4.2px;
     font-size: 18px;
-}
-
-#reset, #mostrar {
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .letraSeleccionada {
     text-decoration: underline;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.632);
+    color: white;
+    padding: 2px 8px;
+}
+
+.input {
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+
+.moreInfo {
+    text-align: start;
+    margin: 10px 0;
+    color: white;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-position-y: -200px;
+    }
+
+    .card {
+        box-shadow: 0 10px 50px white;
+    }
 }
