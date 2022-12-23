@@ -12,6 +12,9 @@ const fetchData = async () => {
     };
 };
 
+
+
+
 const biblioteca = document.querySelector(".biblioteca");
 
 const innerData = data => {
@@ -24,4 +27,4 @@ const innerData = data => {
         </div>
         `
     });
-}
+};

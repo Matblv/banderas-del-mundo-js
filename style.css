@@ -120,6 +120,13 @@ main {
     padding: 10px 20px;
 }
 
+.point {
+    font-size: 28px;
+    color: white;
+    position: relative;
+    top: 55px;
+}
+
 
 /* ESTILOS BIBLIOTECA */
 

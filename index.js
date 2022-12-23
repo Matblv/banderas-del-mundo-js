@@ -6,8 +6,11 @@ const reset = document.getElementById("reset");
 const mostrar = document.getElementById("mostrar");
 const input = document.querySelector(".input");
 const moreInfo = document.querySelector(".moreInfo");
-const i2 = document.getElementById("i2")
-
+const i2 = document.getElementById("i2");
+const point = document.querySelector(".point");
+let contador = sessionStorage.getItem("contador");
+point.innerHTML = `puntos: ${contador}`
+if (typeof contador === "object") point.innerHTML = `puntos: 0`
 
 const fetchData = async () => {
     try {
@@ -17,7 +20,7 @@ const fetchData = async () => {
         reset.addEventListener("click", () => {
             location.reload();
             input.value = "";
-        })
+        });
     } catch {
         
     };
@@ -28,7 +31,7 @@ const imageContainer = document.querySelector(".imageContainer");
 let rand = Math.random() * 250;
 console.log(parseInt(rand));
 const nombrePaises = [];
-
+const puntos = [];
 
 const adivinar = data => {
     let poblacion = data[parseInt(rand)].population;
@@ -68,7 +71,10 @@ const adivinar = data => {
                 <p>Continente: ${data[parseInt(rand)].subregion}.</p>
                 <p>Población: ${poblacionPoint}</p>
                 `
-                reset.focus()
+                contador++
+                point.innerHTML = `puntos: ${contador}`
+                sessionStorage.setItem("contador", contador)
+                reset.focus();
             }, 500);
         };
     });
