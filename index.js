@@ -49,6 +49,14 @@ const adivinar = data => {
         input.style.color = "white";
         input.value = paisSelec;
         input.readOnly = true;
+        moreInfo.innerHTML = 
+                `
+                <p>Capital: ${data[parseInt(rand)].capital}.</p>
+                <p>Lenguaje: ${data[parseInt(rand)].languages[0].name}.</p>
+                <p>Continente: ${data[parseInt(rand)].region}.</p>
+                <p>Población: ${poblacionPoint}</p>
+                <p style="color: greenyellow;">Mas info: <a style="color: lightblue;" target="_blank" href="https://es.wikipedia.org/wiki/${paisSelec.toLowerCase()}">CLICK AQUÍ</a></p>
+                `
     })
 
     imageContainer.innerHTML += `<img alt="flag" class="flagImage" src="${data[parseInt(rand)].flag}">`
@@ -68,7 +76,7 @@ const adivinar = data => {
                 `
                 <p>Capital: ${data[parseInt(rand)].capital}.</p>
                 <p>Lenguaje: ${data[parseInt(rand)].languages[0].name}.</p>
-                <p>Continente: ${data[parseInt(rand)].subregion}.</p>
+                <p>Continente: ${data[parseInt(rand)].region}.</p>
                 <p>Población: ${poblacionPoint}</p>
                 <p style="color: greenyellow;">Mas info: <a style="color: lightblue;" target="_blank" href="https://es.wikipedia.org/wiki/${paisSelec.toLowerCase()}">CLICK AQUÍ</a></p>
                 `

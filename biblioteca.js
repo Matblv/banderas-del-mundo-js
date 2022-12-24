@@ -1,6 +1,5 @@
 // document.addEventListener("DOMContentLoaded", () => {
-//     // fetchData();
-//     fetchDataAfr();
+//     fetchData();
 // });
 
 // const fetchData = async () => {
@@ -73,69 +72,81 @@ const eurBtn = document.getElementById("eurBtn");
 const oceBtn = document.getElementById("oceBtn");
 const arr = [afrBtn, ameBtn, asiBtn, eurBtn, oceBtn];
 
+
 const innerData = data => {
-    data.forEach(e => {
+    // ordenar paises alfabeticamente
+    data.sort((a, b) => {
+        if (a.translations.spa.common < b.translations.spa.common) {
+            return -1
+        }
+        if (a.translations.spa.common > b.translations.spa.common) {
+            return 1
+        }
+        return 0
+    })
+    // agregar paises
+    data.forEach((e, i) => {
         biblioteca.innerHTML += 
         `
         <div class="cardBiblio">
             <img class="flagImage" src="${e.flags.png}" alt="flag">
             <p class="nombrePais">${e.translations.spa.common}</p>
         </div>
-        `
-    });
+        `;
+    })
 };
 
 afrBtn.addEventListener("click", () => {
     arr.forEach(e => {
         e.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         e.style.color = "white";
-    })
+    });
     afrBtn.style.backgroundColor = "white";
     afrBtn.style.color = "black";
     biblioteca.innerHTML = "";
     fetchDataAfr();
-})
+});
 
 ameBtn.addEventListener("click", () => {
     arr.forEach(e => {
         e.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         e.style.color = "white";
-    })
+    });
     ameBtn.style.backgroundColor = "white";
     ameBtn.style.color = "black";
     biblioteca.innerHTML = "";
     fetchDataAme();
-})
+});
 
 asiBtn.addEventListener("click", () => {
     arr.forEach(e => {
         e.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         e.style.color = "white";
-    })
+    });
     asiBtn.style.backgroundColor = "white";
     asiBtn.style.color = "black";
     biblioteca.innerHTML = "";
     fetchDataAsi();
-})
+});
 
 eurBtn.addEventListener("click", () => {
     arr.forEach(e => {
         e.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         e.style.color = "white";
-    })
+    });
     eurBtn.style.backgroundColor = "white";
     eurBtn.style.color = "black";
     biblioteca.innerHTML = "";
     fetchDataEur();
-})
+});
 
 oceBtn.addEventListener("click", () => {
     arr.forEach(e => {
         e.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         e.style.color = "white";
-    })
+    });
     oceBtn.style.backgroundColor = "white";
     oceBtn.style.color = "black";
     biblioteca.innerHTML = "";
     fetchDataOce();
-})
+});
