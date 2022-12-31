@@ -100,14 +100,6 @@ main {
     cursor: pointer;
 }
 
-.letraSeleccionada {
-    text-decoration: underline;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.632);
-    color: white;
-    padding: 2px 8px;
-}
-
 .input {
     border: none;
     background: rgba(0, 0, 0, 0.4);
