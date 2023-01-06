@@ -64,11 +64,11 @@ const fetchDataAfr = async () => {
         const lesoFlag = nombrePaisesAfr[35].flag;
         const leoFlag = nombrePaisesAfr[41].flag;
         //corrigiendo nombres
-        nombrePaisesAfr.splice(3,1,{name: "BOTSUANA", flag: botsFlag});
-        nombrePaisesAfr.splice(9,1,{name: "REPÚBLICA DEMOCRÁTICA DEL CONGO", flag: repCongFlag});
-        nombrePaisesAfr.splice(28,1,{name: "MALAUI", flag: malaFlag});
-        nombrePaisesAfr.splice(35,1,{name: "LESOTO", flag: lesoFlag});
-        nombrePaisesAfr.splice(41,1,{name: "SIERRA LEONA", flag: leoFlag});
+        // nombrePaisesAfr.splice(3,1,{name: "BOTSUANA", flag: botsFlag});
+        // nombrePaisesAfr.splice(9,1,{name: "REPÚBLICA DEMOCRÁTICA DEL CONGO", flag: repCongFlag});
+        // nombrePaisesAfr.splice(28,1,{name: "MALAUI", flag: malaFlag});
+        // nombrePaisesAfr.splice(35,1,{name: "LESOTO", flag: lesoFlag});
+        // nombrePaisesAfr.splice(41,1,{name: "SIERRA LEONA", flag: leoFlag});
         //ordenar alfabeticamente el arr
         nombrePaisesAfr.sort((a, b) => {
             if (a.name < b.name) {
@@ -126,11 +126,6 @@ const fetchDataAsi = async () => {
                 nombrePaisesAsi.push(new Pais(e.translations.spa.common.toUpperCase(), e.flags.png));
             })
         }
-        //corrigiendo nombres
-        const iranFlag = nombrePaisesAsi[1].flag;
-        const barFlag = nombrePaisesAsi[38].flag;
-        nombrePaisesAsi.splice(1,1,{name: "IRÁN", flag: iranFlag});
-        nombrePaisesAsi.splice(38,1,{name: "BARÉIN", flag: barFlag})
         //ordenar alfabeticamente el arr
         nombrePaisesAsi.sort((a, b) => {
             if (a.name < b.name) {
@@ -141,6 +136,24 @@ const fetchDataAsi = async () => {
             }
             return 0
         })
+        console.log(nombrePaisesAsi);
+        //corrigiendo nombres
+        // const arabFlag = [nombrePaisesAsi[1].flag];
+        // nombrePaisesAsi.splice(1,1,{name: "ARABIA SAUDITA", flag: arabFlag});
+        // nombrePaisesAsi.splice(4,1,{name: "BARÉIN", flag: nombrePaisesAsi[4].flag});
+        // const iranFlag = nombrePaisesAsi[1].flag;
+        // nombrePaisesAsi.splice(1,1,{name: "IRÁN", flag: iranFlag});
+        //ordenar alfabeticamente el arr
+        nombrePaisesAsi.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1
+            }
+            if (a.name > b.name) {
+                return 1
+            }
+            return 0
+        })
+        console.log(nombrePaisesAsi);
         innerData(data, nombrePaisesAsi);
     } catch {
         
@@ -160,15 +173,25 @@ const fetchDataEur = async () => {
                 nombrePaisesEur.push(new Pais(e.translations.spa.common.toUpperCase(), e.flags.png));
             })
         }
+        //ordenar alfabeticamente el arr
+        nombrePaisesEur.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1
+            }
+            if (a.name > b.name) {
+                return 1
+            }
+            return 0
+        })
         //corrigiendo nombres
-        const feroFlag = nombrePaisesEur[1].flag;
-        const esloFlag = nombrePaisesEur[2].flag;
-        const cheFlag = nombrePaisesEur[16].flag;
-        const rumaFlag = nombrePaisesEur[30].flag;
-        nombrePaisesEur.splice(1,1,{name: "ISLAS FEROE", flag: feroFlag});
-        nombrePaisesEur.splice(2,1,{name: "ESLOVAQUIA", flag: esloFlag});
-        nombrePaisesEur.splice(16,1,{name: "REPÚBLICA CHECA", flag: cheFlag});
-        nombrePaisesEur.splice(30,1,{name: "RUMANÍA", flag: rumaFlag});
+        // const feroFlag = nombrePaisesEur[1].flag;
+        // const esloFlag = nombrePaisesEur[2].flag;
+        // const cheFlag = nombrePaisesEur[16].flag;
+        // const rumaFlag = nombrePaisesEur[30].flag;
+        // nombrePaisesEur.splice(1,1,{name: "ISLAS FEROE", flag: feroFlag});
+        // nombrePaisesEur.splice(2,1,{name: "ESLOVAQUIA", flag: esloFlag});
+        // nombrePaisesEur.splice(16,1,{name: "REPÚBLICA CHECA", flag: cheFlag});
+        // nombrePaisesEur.splice(30,1,{name: "RUMANÍA", flag: rumaFlag});
         //ordenar alfabeticamente el arr
         nombrePaisesEur.sort((a, b) => {
             if (a.name < b.name) {
